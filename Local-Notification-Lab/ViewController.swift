@@ -10,6 +10,11 @@ import UIKit
 import UserNotifications
 
 class ViewController: UIViewController {
+    
+    
+    private let center = UNUserNotificationCenter.current()
+    
+    private var refreshControl: UIRefreshControl!
 
     override func viewDidLoad() {
         super.viewDidLoad()
