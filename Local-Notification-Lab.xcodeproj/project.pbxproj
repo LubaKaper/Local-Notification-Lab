@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8D091B612402D53E004EC667 /* PendingNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D091B602402D53E004EC667 /* PendingNotification.swift */; };
 		8D091B632402DE77004EC667 /* SetTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D091B622402DE77004EC667 /* SetTimerViewController.swift */; };
+		8D091B65240304F3004EC667 /* IMG_0279.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 8D091B64240304F3004EC667 /* IMG_0279.JPG */; };
 		8D8B243C24002C810005DE7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8B243B24002C810005DE7E /* AppDelegate.swift */; };
 		8D8B243E24002C810005DE7E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8B243D24002C810005DE7E /* SceneDelegate.swift */; };
 		8D8B244024002C810005DE7E /* ManageTimersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8B243F24002C810005DE7E /* ManageTimersViewController.swift */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		8D091B602402D53E004EC667 /* PendingNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingNotification.swift; sourceTree = "<group>"; };
 		8D091B622402DE77004EC667 /* SetTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTimerViewController.swift; sourceTree = "<group>"; };
+		8D091B64240304F3004EC667 /* IMG_0279.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = IMG_0279.JPG; path = ../../../Downloads/IMG_0279.JPG; sourceTree = "<group>"; };
 		8D8B243824002C810005DE7E /* Local-Notification-Lab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Local-Notification-Lab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D8B243B24002C810005DE7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D8B243D24002C810005DE7E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				8D8B243B24002C810005DE7E /* AppDelegate.swift */,
 				8D8B243D24002C810005DE7E /* SceneDelegate.swift */,
 				8D8B243F24002C810005DE7E /* ManageTimersViewController.swift */,
+				8D091B64240304F3004EC667 /* IMG_0279.JPG */,
 				8D8B244124002C810005DE7E /* Main.storyboard */,
 				8D8B244424002C840005DE7E /* Assets.xcassets */,
 				8D8B244624002C840005DE7E /* LaunchScreen.storyboard */,
@@ -132,6 +135,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D8B244824002C840005DE7E /* LaunchScreen.storyboard in Resources */,
+				8D091B65240304F3004EC667 /* IMG_0279.JPG in Resources */,
 				8D8B244524002C840005DE7E /* Assets.xcassets in Resources */,
 				8D8B244324002C810005DE7E /* Main.storyboard in Resources */,
 			);

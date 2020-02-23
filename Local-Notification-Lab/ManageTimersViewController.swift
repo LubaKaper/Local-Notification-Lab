@@ -58,7 +58,7 @@ class ManageTimersViewController: UIViewController {
         guard let navVC = segue.destination as? UINavigationController, let setTimerVC = navVC.viewControllers.first as? SetTimerViewController else {
             fatalError("could not downcast to SetTimerViewController")
         }
-        // add here
+        setTimerVC.delegate = self
     }
     
     private func checkForNotificationAuthorization() {
@@ -88,14 +88,14 @@ class ManageTimersViewController: UIViewController {
 
 extension ManageTimersViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5//notifications.count
+        return notifications.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "notificationCell", for: indexPath)
-//        let notification = notifications[indexPath.row]
-//        cell.textLabel?.text = notification.content.title
-//        cell.detailTextLabel?.text = notification.content.body
+        let notification = notifications[indexPath.row]
+        cell.textLabel?.text = notification.content.title
+        cell.detailTextLabel?.text = notification.content.body
         return cell
     }
     
@@ -121,4 +121,10 @@ extension ManageTimersViewController: UNUserNotificationCenterDelegate {
     }
 }
 
-//extension ManageTimersViewController: Createno
+extension ManageTimersViewController: SetTimerControllerDelegate {
+    func didCreateTimer(_ setTimerController: SetTimerViewController) {
+        loadNotifications()
+    }
+    
+    
+}

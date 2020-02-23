@@ -14,10 +14,50 @@
                     <view key="view" contentMode="scaleToFill" id="DZe-Kg-3Df">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="your message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QPB-2m-hOB">
+                                <rect key="frame" x="20" y="56" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpU-du-Tnw">
+                                <rect key="frame" x="0.0" y="110" width="414" height="216"/>
+                                <connections>
+                                    <action selector="timerChanged:" destination="mdb-s5-dc4" eventType="valueChanged" id="W0s-df-gmI"/>
+                                </connections>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xFC-b0-RP4">
+                                <rect key="frame" x="183.5" y="406" width="47" height="30"/>
+                                <state key="normal" title="START"/>
+                                <connections>
+                                    <action selector="startButtonPressed:" destination="mdb-s5-dc4" eventType="touchUpInside" id="7m6-VZ-l5F"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="fpU-du-Tnw" firstAttribute="leading" secondItem="u4I-qY-pwF" secondAttribute="leading" id="4du-Am-Dv4"/>
+                            <constraint firstItem="QPB-2m-hOB" firstAttribute="leading" secondItem="u4I-qY-pwF" secondAttribute="leading" constant="20" id="HS5-qO-FLN"/>
+                            <constraint firstItem="u4I-qY-pwF" firstAttribute="trailing" secondItem="QPB-2m-hOB" secondAttribute="trailing" constant="20" id="UzQ-ur-Fdo"/>
+                            <constraint firstItem="xFC-b0-RP4" firstAttribute="centerX" secondItem="DZe-Kg-3Df" secondAttribute="centerX" id="YWX-jd-BaH"/>
+                            <constraint firstItem="QPB-2m-hOB" firstAttribute="top" secondItem="u4I-qY-pwF" secondAttribute="top" id="kfa-Gt-ZKT"/>
+                            <constraint firstItem="fpU-du-Tnw" firstAttribute="top" secondItem="QPB-2m-hOB" secondAttribute="bottom" constant="20" id="kxr-jd-5ki"/>
+                            <constraint firstItem="fpU-du-Tnw" firstAttribute="trailing" secondItem="u4I-qY-pwF" secondAttribute="trailing" id="lf9-c7-SBQ"/>
+                            <constraint firstItem="xFC-b0-RP4" firstAttribute="centerY" secondItem="DZe-Kg-3Df" secondAttribute="centerY" id="r0B-8E-U3A"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="u4I-qY-pwF"/>
                     </view>
-                    <navigationItem key="navigationItem" id="eV4-O1-txl"/>
+                    <navigationItem key="navigationItem" id="eV4-O1-txl">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="Gx5-MJ-kLQ">
+                            <connections>
+                                <action selector="doneButtonPressed:" destination="mdb-s5-dc4" id="cLu-2q-2rg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="messageTextField" destination="QPB-2m-hOB" id="ZJ8-lL-UUB"/>
+                        <outlet property="timerPicker" destination="fpU-du-Tnw" id="Gmk-10-0AL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6aa-e8-wLt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
