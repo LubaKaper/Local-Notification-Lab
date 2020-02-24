@@ -22,7 +22,9 @@ class SetTimerViewController: UIViewController {
     
     weak var delegate: SetTimerControllerDelegate?
     
-    private var timeInterval: TimeInterval!
+    private var timeInterval: TimeInterval = Date().timeIntervalSinceNow + 5
+        
+    
     
     
     override func viewDidLoad() {
@@ -34,8 +36,8 @@ class SetTimerViewController: UIViewController {
     private func createLocalNotification() {
         let content = UNMutableNotificationContent()
         content.title = messageTextField.text ?? "no title"
-        content.body = "\(timeInterval.description) minutes"
-        content.subtitle = ""
+        //content.body = "\(timeInterval.description) minutes"
+        content.subtitle = " \((timeInterval / 60).description) minutes"
         content.sound = .default
         
         
@@ -65,14 +67,20 @@ class SetTimerViewController: UIViewController {
         }
     }
     
-
-    @IBAction func timerChanged(_ sender: UIDatePicker) {
-        timeInterval = sender.countDownDuration
+    
+    
+    @IBAction func timeChange(_ sender: UIDatePicker) {
+//            guard sender.date > Date() else { return }
+                       // timeintervalsincenow creates a time stamp of the exact date
+        //               timeInterval = sender.date.timeIntervalSinceNow
+                timeInterval = sender.countDownDuration//date.timeIntervalSinceNow
+        //        print(sender.countDownDuration)
     }
     
     
     
     @IBAction func doneButtonPressed(_ sender: UIBarButtonItem) {
+       
         createLocalNotification()
         
         delegate?.didCreateTimer(self)
@@ -85,5 +93,5 @@ class SetTimerViewController: UIViewController {
         
     }
     
-
 }
+

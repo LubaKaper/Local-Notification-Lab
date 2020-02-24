@@ -20,18 +20,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpU-du-Tnw">
+                            <datePicker contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpU-du-Tnw">
                                 <rect key="frame" x="0.0" y="110" width="414" height="216"/>
                                 <connections>
-                                    <action selector="timerChanged:" destination="mdb-s5-dc4" eventType="valueChanged" id="W0s-df-gmI"/>
+                                    <action selector="timeChange:" destination="mdb-s5-dc4" eventType="valueChanged" id="qGk-RI-90y"/>
                                 </connections>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xFC-b0-RP4">
                                 <rect key="frame" x="183.5" y="406" width="47" height="30"/>
                                 <state key="normal" title="START"/>
-                                <connections>
-                                    <action selector="startButtonPressed:" destination="mdb-s5-dc4" eventType="touchUpInside" id="7m6-VZ-l5F"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -56,7 +53,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="messageTextField" destination="QPB-2m-hOB" id="ZJ8-lL-UUB"/>
-                        <outlet property="timerPicker" destination="fpU-du-Tnw" id="Gmk-10-0AL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6aa-e8-wLt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

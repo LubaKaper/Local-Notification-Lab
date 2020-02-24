@@ -95,7 +95,8 @@ extension ManageTimersViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "notificationCell", for: indexPath)
         let notification = notifications[indexPath.row]
         cell.textLabel?.text = notification.content.title
-        cell.detailTextLabel?.text = notification.content.body
+        cell.detailTextLabel?.text = notification.content.subtitle
+        
         return cell
     }
     
